@@ -1,10 +1,10 @@
 
 all: 
-	g++ -o hello hello.c
-	./hello
+	g++ -o parser parser.c
+	./parser
 
 clean: 
-	-rm hello
+	-rm parser
 
 
 
