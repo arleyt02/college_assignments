@@ -2,12 +2,28 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <sys/types.h>
+#include <unistd.h>
 #include <ctype.h> 
 
 int main(int argc, char **argv){
 
   char name[512]; //input could only be 512 characters long
   char * pch; //pch is a char pointer for all my tokens when using strtok
+  char * tok_array[512][512];
+
+  char  current_token = 'G';
+ // char *pcurrent_token = malloc(2*sizeof(char));
+ // pcurrent_token[0] = current_token;
+ // pcurrent_token[1] = '\0';
+  char *cmd = "ls";
+  char *test[1];
+  test[0] = "ls";
+ // test[1] = "-la";
+  test[1] = NULL;
+
+  execvp(cmd,test);
+
   signed int is_command = 0; 
   signed int is_argument = 0;
   signed int is_pipe = 0;
