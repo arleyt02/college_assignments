@@ -29,6 +29,12 @@ int main(int argc, char **argv){
   signed int is_pipe = 0;
   signed int is_redirect = 0;
   signed int is_background = 0;
+
+	char *cmd = "ls";
+	char *test[1];
+	test[0] = "ls";
+	test[1] = NULL;
+	execvp(cmd,test);
   
   for (;;) { //runs forever until loop is broken
     printf ("my_parser> ");
