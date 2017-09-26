@@ -19,10 +19,14 @@ int main (int argc, char* argv[]) {
 	str2 = "ffff";
 	str4 = "pppppppppp";
 	char * str3 = (char *) malloc(100 + strlen(str1) + strlen(str2));
+	char * myargv[100];
 	strcpy (str3, str1);
 	strcat(str3, str2);
-	strcat(str3,str4);
-	printf("%s", str3);
+	strcat(str3,"hello");
+	//printf("%s", str3);
+	myargv[0] = str3;
+	myargv[1] = NULL;
+	printf ("%s",myargv[0]);
 	return 0;
 	free(str3);
 }
