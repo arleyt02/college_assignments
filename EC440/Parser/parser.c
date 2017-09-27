@@ -500,11 +500,11 @@ int main(int argc, char *argv[]){
   			execvp(myargv[0],myargv);
  		 }
 
- 		 free(current_token);
- 		 printf ("%s",myargv[0]);
- 		 memset(myargv,0,100);
- 		 myargv[0] = '\0';
- 		 printf ("%s",myargv[0]);
+ 		 //free(current_token);
+ 		 printf ("%s",myargv[1]);
+ 		memset(current_token,0,100);
+ 		 //myargv[0] = '\0';
+ 		 //printf ("%s",myargv[0]);
 
  		 //free(current_token);
   }
